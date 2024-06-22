@@ -6,7 +6,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla App Template</title>
     
-    <link rel="stylesheet" href="/goit-js-hw-09/assets/index-10c40100.css">
+    <script type="module" crossorigin src="/goit-js-hw-09/commonHelpers3.js"></script>
+    <link rel="stylesheet" href="/goit-js-hw-09/assets/index-52e50f3c.css">
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="tabs">
+        <input type="radio" name="group" id="home" checked />
+        <input type="radio" name="group" id="about" />
+        <input type="radio" name="group" id="settings" class="outline" />
+        <input type="radio" name="group" id="security" class="outline" />
+        <div class="icon">
+          <label for="home"><ion-icon name="apps-outline"></ion-icon></label>
+          <label for="about"
+            ><ion-icon name="newspaper-outline"></ion-icon
+          ></label>
+          <label class="outline" for="settings"
+            ><ion-icon class="outline" name="lock-closed-outline"></ion-icon
+          ></label>
+          <label for="security" class="outline"
+            ><ion-icon name="lock-closed-outline" class="outline"></ion-icon
+          ></label>
+          <div class="indicator"></div>
+        </div>
+        <div class="content">
+          <div class="contentBx" for="home">
+            <h2>
+              <a href="./1-gallery.html" class="content-title">Gallery</a>
+            </h2>
+            <p>Just press the Gallery link</p>
+            <p>
+              You'll see a page work on with plugin
+              <a href="https://www.npmjs.com/package/simplelightbox/v/2.2.0"
+                >SimpleLighBox</a
+              >
+            </p>
+            <p>
+              Link to documentation
+              <a href="https://www.npmjs.com/package/simplelightbox/v/2.2.0"
+                >SimpleLighBox</a
+              >
+            </p>
+          </div>
+
+          <div class="contentBx" for="about">
+            <h2><a href="./2-form.html" class="content-title"> Form</a></h2>
+            <p>Just press the Form link</p>
+            <p>You'll see the page work on with use Local storage</p>
+            <p>in that case I did pre-save form's information</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script>
+      document.querySelector('.tabs').addEventListener('click', event => {
+        if (event.target.classList.contains('outline')) {
+          event.preventDefault();
+        }
+      });
+    </script>
+  </body>
 </html>
