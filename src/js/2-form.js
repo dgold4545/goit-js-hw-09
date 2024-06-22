@@ -34,9 +34,6 @@ formRefs.formElem.addEventListener('submit', event => {
   const email = formValues.email.value.trim();
   const message = formValues.message.value.trim();
 
-  // if (!email || !message) {
-  //   alert('«Fill please all fields»');
-  // }
   if (email && message) {
     console.log(formData);
     localStorage.removeItem(LS_KEY_FORM_STATE);
