@@ -1,1 +1,1 @@
-{"version":3,"file":"commonHelpers3.js","sources":[],"sourcesContent":[],"names":[],"mappings":""}
+{"version":3,"file":"commonHelpers3.js","sources":["../src/helper/lockClosed.js"],"sourcesContent":["document.querySelector('.tabs').addEventListener('click', event => {\n  if (event.target.classList.contains('outline')) {\n    event.preventDefault();\n  }\n});\n"],"names":["event"],"mappings":"ssBAAA,SAAS,cAAc,OAAO,EAAE,iBAAiB,QAASA,GAAS,CAC7DA,EAAM,OAAO,UAAU,SAAS,SAAS,GAC3CA,EAAM,eAAc,CAExB,CAAC"}
