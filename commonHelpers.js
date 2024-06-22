@@ -10,5 +10,5 @@ import"./assets/modulepreload-polyfill-3cfb730f.js";import{S as t}from"./assets/
         </a>
       </li>
 
-  `).join("")}const c={galleryList:document.querySelector(".gallery")};c.galleryList.insertAdjacentHTML("afterbegin",n(e));new t(".gallery a",{captionsData:"alt",captionDelay:250});
+  `).join("")}const c={galleryList:document.querySelector(".gallery")};c.galleryList.insertAdjacentHTML("afterbegin",n(e));new t(".gallery a",{captionsData:"alt",captionDelay:250,captions:!0});
 //# sourceMappingURL=commonHelpers.js.map
