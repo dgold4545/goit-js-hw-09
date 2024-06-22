@@ -1,0 +1,39 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+
+  max-width: 1128px;
+  margin: 24px auto;
+
+  list-style-type: none;
+}
+
+.gallery-item {
+  width: calc((100% - 48px) / 3);
+}
+
+.gallery-link {
+  width: 360px;
+  height: 200px;
+}
+
+.gallery-image {
+  display: block;
+  width: 100%;
+}
+
+h1 {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.sl-wrapper.simple-lightbox > .sl-counter,
+.sl-wrapper.simple-lightbox .sl-navigation button,
+.sl-wrapper.simple-lightbox .sl-close {
+  color: #fff !important;
+}
+
+.sl-wrapper.simple-lightbox {
+  background-color: #2e2f42cc !important;
+}
