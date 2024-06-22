@@ -1,6 +1,6 @@
 import { images } from '../markup/images';
 import { createMarkup } from '../markup/createMarkup';
-import { galleryRefs } from '../markup/galleryRefs';
+import { galleryRefs } from '../refs/galleryRefs';
 // Описаний в документації
 import SimpleLightbox from 'simplelightbox';
 // Додатковий імпорт стилів
