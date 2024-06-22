@@ -158,3 +158,13 @@ ion-icon {
 [name='lock-closed-outline'] {
   display: none;
 }
+
+h1,
+h2 {
+  transition: transform 350ms;
+}
+
+h1,
+h2:hover {
+  transform: scaleX(1.1);
+}
