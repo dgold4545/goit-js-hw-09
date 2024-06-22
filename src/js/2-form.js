@@ -1,5 +1,6 @@
 import { formRefs } from '../refs/formRefs';
 import { setLocalStorage } from '../helper/setLocalStorage';
+import { getLocalStorage } from '../helper/getLocalStorage';
 
 const LS_KEY_FORM_STATE = 'feedback-form-state';
 
@@ -12,21 +13,32 @@ formRefs.formElem.addEventListener('input', fedbackFromState);
 
 function fedbackFromState(event) {
   const curTarget = event.currentTarget;
-  // console.dir(curTarget.elements.email.value);
-  // console.dir(curTarget.elements.message.value);
 
   const form = new FormData(curTarget);
 
-  formData.email = form.get('email');
-  formData.message = form.get('message');
+  formData.email = form.get('email').trim();
+  formData.message = form.get('message').trim();
 
   setLocalStorage(LS_KEY_FORM_STATE, formData);
 }
 
-function getLocalStorageValue(key) {
-  const valueFromLS = JSON.parse(localStorage.getItem(key));
+document.addEventListener('DOMContentLoaded', (event, refElem) => {
+  getLocalStorage(LS_KEY_FORM_STATE, formRefs.formElem);
+});
 
-  console.log(valueFromLS);
-}
+formRefs.formElem.addEventListener('submit', event => {
+  event.preventDefault();
+  const form = event.currentTarget;
 
-getLocalStorageValue(LS_KEY_FORM_STATE);
+  const formValues = form.elements;
+  const email = formValues.email.value.trim();
+  const message = formValues.message.value.trim();
+
+  if (!email || !message) {
+    alert('«Fill please all fields»');
+  } else {
+    console.log(formData);
+  }
+
+  form.reset();
+});
